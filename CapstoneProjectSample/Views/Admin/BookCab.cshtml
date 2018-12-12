@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Book Cab";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <h1> Book Cab </h1> <br />
+    <h2> Enter Journey Details</h2>
+</div>
+<table>
+    <tr>
+        <td align="right"><label>Customer Id:   </label></td>
+        <td align="left"><input id="txtCustId" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Name:   </label></td>
+        <td align="left"><input id="txtName" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Wallet Balance:   </label></td>
+        <td align="left"><input id="txtBalance" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Driver Id:   </label></td>
+        <td align="left">@Html.DropDownListFor(x => x, new SelectList(Model.DriverId, "Value", "Text",0))</td>
+    </tr>
+    <tr>
+        <td align="right"><label>Duration for Cab Booking:   </label></td>
+        <td align="left"><input id="" type="radio" name="time" value="For 1 hour" /></td>
+        <td align="left"><input id="" type="radio" name="time" value="For 2 hour" checked /></td>
+        <td align="left"><input id="" type="radio" name="time" value="For 3 hour" /></td>
+        <td align="left"><input id="" type="radio" name="time" value="For 4 hour" /></td>
+        <td align="left"><input id="" type="radio" name="time" value="For 5 hour" /></td>
+    </tr>
+    <tr>
+        <td align="right"></td>
+        <td align="left"><input id="Book" type="button" value="  Book" onclick="SubmitRequest"/></td>
+    </tr>
+
+</table>

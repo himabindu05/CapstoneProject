@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Book My Cab";
+}
+
+<div >
+    <h1 style="font:large">View Customers</h1>
+    <table id="tblCustomer" border="1">
+        <tr>
+            <td width="40"> Customer Id </td>
+            <td width="40">Name</td>
+            <td width="40">Wallet Balance</td>
+            <td width="40"> Address</td>
+            <td width="40">Offer Percent</td>
+            <td width="40"></td>
+        </tr>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+        <tr>
+            <td> @Model[i].RowKey </td>
+            <td> @Model[i].CustomerName </td>
+            <td> @Model[i].Balance </td>
+            <td> @Model[i].Address </td>
+            <td> @Model[i].Offer </td>
+            <td>@Html.ActionLink("Book Cab", "BookCab") | @Html.ActionLink("Recharge Wallet","RechargeWallet") </td>
+        </tr>
+        }
+    </table>
+</div>

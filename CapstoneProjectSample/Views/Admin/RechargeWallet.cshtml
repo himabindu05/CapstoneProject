@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<div>
+    <h1> Recharge Wallet. </h1> <br />
+    <h2> Enter Recharge Amount</h2>
+</div>
+
+<table>
+    <tr>
+        <td align="right"><label>Customer Id:   </label></td>
+        <td align="left"><input id="txtCustId" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Name:   </label></td>
+        <td align="left"><input id="txtName" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Wallet Balance:   </label></td>
+        <td align="left"><input id="txtBalance" type="text" /></td>
+    </tr>
+    <tr>
+        <td align="right"><label>Recharge Amount:   </label></td>
+        <td align="left">@Html.DropDownListFor(x => x, new SelectList(Model.DriverId, "Value", "Text", 0))</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td align="left"><input id="Book" type="button" value="  Book" onclick="RechargeAmount" /></td>
+    </tr>
+</table>
